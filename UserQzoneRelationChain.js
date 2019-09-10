@@ -1,6 +1,6 @@
 document.domain="qq.com";
 function openProxy(){
-  var a = window.open("https://user.qzone.qq.com/troubleshooter?traytip");
+  var a = window.open("about:blank");
   a.onload = function(){
     a.localStorage.getItem("app_friends_649114132");
   }
