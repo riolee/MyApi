@@ -14,6 +14,7 @@ def checkFlag():
     except:
         print("connect nginx 81 port failure!")
 
+
 def setFlagTrue():
     # print("set flag true")
     with open(filename) as f:
@@ -21,11 +22,13 @@ def setFlagTrue():
     with open(filename, "w") as f:
         f.write(file_str.replace("该路径未关闭", "该路径已关闭"))
 
+
 def setFlagFalse():
     with open(filename) as f:
         file_str = f.read()
     with open(filename, "w") as f:
         f.write(file_str.replace("该路径已关闭", "该路径未关闭"))
+
 
 while 1:
     filename = "index.html"
