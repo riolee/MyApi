@@ -9,7 +9,8 @@
 # Description:       starts svnd.sh using start-stop-daemon
 ### END INIT INFO
 
-cd /home/ctf/
-echo "1" > test.txt
-python3 -m http.server 80 &
+cd /home/ctf/babyPath/
 python3 babyPath.py &
+python3 -m http.server 80 &
+exit 0
+
