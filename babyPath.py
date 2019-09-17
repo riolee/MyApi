@@ -5,11 +5,14 @@ import requests
 
 def checkFlag():
     setFlagFalse()
-    url = 'http://127.0.0.1:81/backup/'
-    s = requests.get(url)
-    status = s.status_code
-    if (status == 403):
-        setFlagTrue()
+    try:
+        url = 'http://127.0.0.1:81/backup/'
+        s = requests.get(url)
+        status = s.status_code
+        if (status == 403):
+            setFlagTrue()
+    except:
+        print("connect nginx 81 port failure!")
 
 def setFlagTrue():
     # print("set flag true")
@@ -26,8 +29,5 @@ def setFlagFalse():
 
 while 1:
     filename = "index.html"
-    try:
-        checkFlag()
-    except:
-        None
+    checkFlag()
     time.sleep(1)
