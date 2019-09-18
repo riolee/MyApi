@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>babyPort - 国网冀北电力有限公司电力科学研究院</title>
+    <link rel="stylesheet" href="./bootstrap.min.css">
+    <link rel="stylesheet" href="./base.css">
+    <link rel="stylesheet" href="./challenge-board.css">
+</head>
+<body>
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-body">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true"></span>
+                </button>
+                <ul class="nav nav-tabs">
+                  <li class="nav-item">
+                    <a class="nav-link active" href="#">国网冀北电力有限公司电力科学研究院</a>
+                  </li>
+                </ul>
+                <div role="tabpanel">
+                    <div class="tab-content">
+                        <div role="tabpanel" class="tab-pane fade show active" id="challenge">
+                            <h2 class="chal-name text-center pt-3">babyPort</h2>
+                            <div class="chal-tags text-center">
+                            运维人员发现数据库疑似有被远程连接的情况，立即修复它！<button class="btn-info" style="cursor: pointer" onclick="location.reload()">验证结果</button>
+                            </div>
+                            <br>
+                            <div class="chal-hints hint-row row">
+                            </div>
+                            <br>
+                            <center>该端口未修复</center>
+                            
+                            <div class="row notification-row">
+                                <div class="col-md-12">
+                                    <div id="result-notification" class="alert alert-dismissable text-center w-100" role="alert" style="display: none;">
+                                      <strong id="result-message"></strong>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div role="tabpanel" class="tab-pane fade" id="solves">
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <table class="table table-striped text-center">
+                                        <thead>
+                                            <tr>
+                                                <td><b>Name</b>
+                                                </td>
+                                                <td><b>Date</b>
+                                                </td>
+                                            </tr>
+                                        </thead>
+                                        <tbody id="chal-solves-names">
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
