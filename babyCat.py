@@ -21,14 +21,14 @@ def setFlagTrue():
     with open(filename) as f:
         file_str = f.read()
     with open(filename, "w") as f:
-        f.write(file_str.replace("该路径未关闭", "该路径已关闭"))
+        f.write(file_str.replace("漏洞未修复", "漏洞已修复"))
 
 
 def setFlagFalse():
     with open(filename) as f:
         file_str = f.read()
     with open(filename, "w") as f:
-        f.write(file_str.replace("该路径已关闭", "该路径未关闭"))
+        f.write(file_str.replace("漏洞已修复", "漏洞未修复"))
 
 
 while 1:
